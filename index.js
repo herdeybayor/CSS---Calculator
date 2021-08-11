@@ -14,5 +14,5 @@ $(".ac").click(() => {
 
 $(".equal").click(()=>{
     var result = $(".display").text();
-    console.log(result);
+    $(".display").text(eval($(".display").text()));
 })
