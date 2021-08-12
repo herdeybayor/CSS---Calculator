@@ -47,4 +47,6 @@ if($(".display").text().length >= 1){
 }else{
     $(".ac").text("AC")
 }
+
+
 }, 1);
