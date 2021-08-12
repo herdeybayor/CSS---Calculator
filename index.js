@@ -39,14 +39,18 @@ $(".equal").click(() => {
     console.log(result);
 })
 
-// Deleting Errors
+// Deleting Errors and Changing font-size
 setInterval(() => {
     var displayBox = $(".display").text();
-if($(".display").text().length >= 1){
-    $(".ac").text("C")
-}else{
-    $(".ac").text("AC")
-}
-
-
+    if ($(".display").text().length >= 12) {
+        $(".display").css("font-size", "2rem");
+    }
+    else if($(".display").text().length < 12){
+        $(".display").css("font-size", "4rem");
+    }
+    else if ($(".display").text().length >= 1) {
+        $(".ac").text("C")
+    } else {
+        $(".ac").text("AC")
+    }
 }, 1);
