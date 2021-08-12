@@ -10,13 +10,13 @@ $(document).keypress(function (event) {
     var a = true;
     var b = isNaN(event.key);
     if (event.key == "Enter") {
-        $(".display").text(eval($(".display").text()));
-    }
-    else if(event.key == "*"){
+        var result = $(".display").text().replace("\u00d7", "*");
+        $(".display").text(eval(result));
+        console.log(result);
+    } else if (event.key == "*") {
         var displayText = $(".display").text();
         $(".display").text(displayText + event.key.replace("*", "\u00d7"));
-    }
-    else if (event.key == "*" || event.key == "/" || event.key == "-" || event.key == "+") {
+    } else if (event.key == "*" || event.key == "/" || event.key == "-" || event.key == "+") {
         var displayText = $(".display").text();
         $(".display").text(displayText + event.key);
     } else if (a !== b) {
@@ -29,7 +29,6 @@ $(document).keypress(function (event) {
 
 // AC click Button
 $(".ac").click(() => {
-    var displayText = $(".display").text();
     $(".display").text("");
 })
 
@@ -37,4 +36,15 @@ $(".ac").click(() => {
 $(".equal").click(() => {
     var result = $(".display").text().replace("\u00d7", "*");
     $(".display").text(eval(result));
+    console.log(result);
 })
+
+// Deleting Errors
+setInterval(() => {
+    var displayBox = $(".display").text();
+if($(".display").text().length >= 1){
+    $(".ac").text("C")
+}else{
+    $(".ac").text("AC")
+}
+}, 1);
