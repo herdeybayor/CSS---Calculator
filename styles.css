@@ -10,7 +10,8 @@ body {
 }
 
 h1 {
-    margin: 50px  auto;
+    padding-top: 100px;
+    margin: 0 auto 50px;
     color: white;
     text-align: center;
     font-size: 4rem;
@@ -82,7 +83,8 @@ h1 {
     margin: 15px;
     position: absolute;
     top: 15px;
-    right: 15px;
+    right: 50%;
+    transform: translateX(50%);
     border: 3px solid white;
     border-radius: 100%;
 }
@@ -120,3 +122,11 @@ h1 {
 .dark-mode .calculator .display {
     flex: 0 0 370px;
 }
+
+@media (max-width: 480px) {
+    h1 {
+      font-size: 2rem;
+      padding-top: 100px;
+      margin: 10px auto;
+    }
+  }
