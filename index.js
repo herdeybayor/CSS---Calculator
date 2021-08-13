@@ -44,14 +44,24 @@ setInterval(() => {
     var displayBox = $(".display").text();
     if ($(".display").text().length >= 12) {
         $(".display").css("font-size", "2rem");
-    }
-    else if($(".display").text().length < 12){
+    } else if ($(".display").text().length < 12) {
         $(".display").css("font-size", "4rem");
     }
-    
-    if($(".display").text().length >= 1) {
+    if ($(".dark-mode .calculator .display").text().length >= 9) {
+        $(".dark-mode .calculator .display").css("font-size", "2rem");
+    } else if ($(".display").text().length < 9) {
+        $(".display").css("font-size", "4rem");
+    }
+    if ($(".display").text().length >= 1) {
         $(".ac").text("C")
     } else {
         $(".ac").text("AC")
     }
 }, 1);
+
+//Dark Mode
+$(".fas").click(function () {
+    $("body").toggleClass("dark-mode");
+    $(".fas").toggleClass("fa-moon");
+    $(".fas").toggleClass("fa-sun");
+})

@@ -73,3 +73,50 @@ h1 {
     border-radius: 0 0 0 20px;
 }
 
+/* Light and Dark Mode */
+
+.toggler {
+    width: 50px;
+    height: 50px;
+    /* background-color: red; */
+    margin: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    border: 3px solid white;
+    border-radius: 100%;
+}
+
+.fas {
+    padding: 5px;
+    font-size: 2rem;
+    /* background-image: url("icons/moon-solid.svg");
+    background-repeat: no-repeat;
+    background-size: cover; */
+    color: white;
+}
+
+.dark-mode {
+    background-color: black;
+}
+
+.dark-mode .calculator .display {
+    background-color: black;
+}
+
+.dark-mode .calculator .btn, .dark-mode .calculator .ac {
+    flex: 0 0 75px;
+    border-radius: 100%;
+    margin: 10px;
+}
+
+.dark-mode .calculator .equal {
+    flex: 0 0 75px;
+    border-radius: 20px;
+    margin-left: -80px;
+    height: 370px;
+}
+
+.dark-mode .calculator .display {
+    flex: 0 0 370px;
+}
