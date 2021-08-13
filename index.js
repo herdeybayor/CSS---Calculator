@@ -64,4 +64,7 @@ $(".fas").click(function () {
     $("body").toggleClass("dark-mode");
     $(".fas").toggleClass("fa-moon");
     $(".fas").toggleClass("fa-sun");
+    $(".btn").toggleClass("no-border");
+    $(".ac").toggleClass("no-border");
+    $(".equal").toggleClass("no-border");
 })

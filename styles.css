@@ -2,6 +2,7 @@
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 body {
     padding: 0;
     margin: 0;
@@ -33,7 +34,9 @@ h1 {
     width: 125px;
 }
 
-.btn, .ac, .equal {
+.btn,
+.ac,
+.equal {
     outline: none;
     border: 1px solid grey;
     font-size: 2rem;
@@ -59,7 +62,8 @@ h1 {
     background-color: rgb(212, 207, 207);
 }
 
-.key, .ac {
+.key,
+.ac {
     flex: 0 0 125px;
     height: 75px;
 }
@@ -72,6 +76,25 @@ h1 {
 
 .bottom-left-radius {
     border-radius: 0 0 0 20px;
+}
+
+.btn,
+.ac,
+.equal {
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn:hover,
+.ac:hover,
+.equal:hover {
+    /* background-color: black; */
+    color: white;
+    opacity: 0.7;
+}
+
+.no-border {
+    border: none;
 }
 
 /* Light and Dark Mode */
@@ -89,13 +112,23 @@ h1 {
     border-radius: 100%;
 }
 
+.toggler:hover {
+    cursor: pointer;
+}
+
 .fas {
-    padding: 5px;
-    font-size: 2rem;
+    padding-top: 10px;
+    font-size: 1.5rem;
     /* background-image: url("icons/moon-solid.svg");
     background-repeat: no-repeat;
     background-size: cover; */
     color: white;
+    transition: 0.5s;
+}
+
+.fas:hover {
+    padding-top: 5px;
+    font-size: 2rem;
 }
 
 .dark-mode {
@@ -106,7 +139,8 @@ h1 {
     background-color: black;
 }
 
-.dark-mode .calculator .btn, .dark-mode .calculator .ac {
+.dark-mode .calculator .btn,
+.dark-mode .calculator .ac {
     flex: 0 0 75px;
     border-radius: 100%;
     margin: 10px;
@@ -123,10 +157,14 @@ h1 {
     flex: 0 0 370px;
 }
 
+.dark-mode .display {
+    margin-top: -50px;
+}
+
 @media (max-width: 480px) {
     h1 {
-      font-size: 2rem;
-      padding-top: 100px;
-      margin: 10px auto;
+        font-size: 2rem;
+        padding-top: 100px;
+        margin: 10px auto;
     }
-  }
+}
